@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>供气系统</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/resert.css" />
+    <link rel="stylesheet" href="css/supplySystem.css" />
+    <script src='js/jquery.min.js'></script>
+    <script src='js/echarts.min.js'></script>
+</head>
+
+<body>
+    <div class="supply-system">
+        <!-- <div class="dataMsg">
+            <img src="./assets/icon/dataMsg.jpg" alt="">
+            <div id="failMsg"></div>
+        </div> -->
+        <header>
+            <div class="main-title">
+                <h1 class="title">实验室监控系统</h1>
+                <!-- <canvas id="myCanvas">
+                    Your browser does not support the HTML5 canvas tag.</canvas> -->
+                <div class="main-time">
+                </div>
+            </div>
+            <div class="system system_1">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat 0px 0px;" />
+                    <span>通风系统</span>
+                </div>
+            </div>
+            <div class="system system_2">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -48px 0px;" />
+                    <span>UPS系统</span>
+                </div>
+            </div>
+            <div class="system system_3">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -100px 0px;" />
+                    <span>供气系统</span>
+                </div>
+            </div>
+            <div class="system system_4">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -149px 0px;" />
+                    <span>温湿度监控系统</span>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+        <div class="supplySystem-svg">
+            <div class="glass-msg">
+                <span class="sp1">
+                    <p class="p1">1#氦气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA01"></p>
+                </span>
+                <span class="sp2">
+                    <p class="p1">2#氦气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA02"></p>
+                </span>
+                <span class="sp3">
+                    <p class="p1">1#氩气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA03"></p>
+                </span>
+                <span class="sp4">
+                    <p class="p1">2#氩气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA04"></p>
+                </span>
+                <span class="sp5">
+                    <p class="p1">1#氮气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA05"></p>
+                </span>
+                <span class="sp6">
+                    <p class="p1">2#氮气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA06"></p>
+                </span>
+                <span class="sp7">
+                    <p class="p1">1#空气瓶</p>
+                    <p class="p2" id="barC020002001SGBB1AA07"></p>
+                </span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
+                height="100%">
+                <g>
+                    <image xlink:href="./assets/icon/qiping.png" width="100%" height="100%" />
+                    <rect id="C020002001SGBB1AA01" x="8.1%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA02" x="17.8%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA03" x="31.4%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="yaqiping_2" x="37.9%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="yaqiping_3" x="44.4%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA04" x="54.2%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA05" x="67.8%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA06" x="77.6%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                    <rect id="C020002001SGBB1AA07" x="91.2%" width="1.1%" height="0" y="0" fill="#00FF00" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="supplySystem-right">
+            <div class="right_1">
+                <div class="table_title">
+                    环境温湿度
+                </div>
+                <table class="tab1">
+                    <tr style="height:2.5rem;">
+                        <td>
+                            <img src="" alt="" width="20px" height="20px"
+                                style=" background:  url(assets/icon/bicon.png) no-repeat 6px -40px;" />
+                            <span>温度</span>
+                        </td>
+                        <td>
+                            <img src="" alt="" width="20px" height="20px"
+                                style=" background:  url(assets/icon/bicon.png) no-repeat -30px -41px;" />
+                            <span>湿度</span>
+                        </td>
+                    </tr>
+                    <tr style="height:2.5rem;">
+                        <td>
+                            <span id="C020002001SGDA1BB01" class="TH620017052820_1"></span>
+                        </td>
+                        <td>
+                            <span id="C020002001SGDA1BD01" class="TH620017052820_2"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right_2">
+                <div class="table_title">氧含量</div>
+                <table class="tab1">
+                    <tr style="height:2.5rem;">
+                        <td>
+                            <img src="" alt="" width="22px" height="22px"
+                                style=" background:  url(assets/icon/bicon.png) no-repeat -230px -80px;">
+                            <span>氧气</span>
+                        </td>
+                    </tr>
+                    <tr style="height:2.5rem;">
+                        <td>
+                            <span id="C020002001SGBA1AA01" class="oxygen"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right_3">
+                <div class="fengshan">
+                    <img id="C020002001SGAE1AH04" src="./assets/icon/fengshanGif.gif" alt="">
+                </div>
+                <div class="hand">手动控制</div>
+            </div>
+        </div>
+    </div>
+    <script src='js/supplySystem.js'></script>
+</body>
+
+</html>

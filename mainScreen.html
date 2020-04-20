@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>实验室监控系统</title>
+	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" href="css/resert.css" />
+	<link rel="stylesheet" href="css/mainScreen.css" />
+	<script src='js/jquery.min.js'></script>
+	<script src='js/echarts.min.js'></script>
+
+</head>
+
+<body>
+	<div class="main-screen">
+		<header>
+			<div class="main-title">
+				<h1 class="title">实验室监控系统</h1>
+				<!-- <canvas id="myCanvas">
+Your browser does not support the HTML5 canvas tag.</canvas> -->
+				<div class="main-time"></div>
+			</div>
+		</header>
+		<!-- <div class="dataMsg">
+			<img src="./assets/icon/dataMsg.jpg" alt="">
+			<div id="failMsg"></div>
+		</div> -->
+		<main>
+			<section>
+				<div class="section-left has-side">
+					<div class="vent-system">
+						<div class="part-top">
+							<img src="" alt="" width="28px" height="28px"
+								style=" background:  url(assets/icon/bicon.png) no-repeat 0px 0px;" />
+							<span>通风系统</span>
+						</div>
+						<div class="vent-section">
+
+							<ul>
+								<li id="pie-pic1"></li>
+								<li id="pie-pic2"></li>
+								<li id="pie-pic3"></li>
+							</ul>
+							<svg id="guoluqi" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" width="20%" height="5%">
+								<rect id="baojing" x="0%" width="12%" height="30%" y="0%" fill="#07C260" />
+								<text x="22%" y="30%" font-size="0.6rem" fill="#999999">活性炭过滤器</text>
+							</svg>
+							<ol>
+								<!--<li>
+										<img src="assets/icon/fengshanGif.gif" alt=""/>
+										<p>401试剂仓库</p>
+										<h1>手动控制</h1>
+									</li>
+									<li>
+										<img src="assets/icon/fengshanGif.gif" alt=""/>
+										<p>401试剂仓库</p>
+										<h1>手动控制</h1>
+									</li>
+									<li>
+										<img src="assets/icon/fengshanGif.gif" alt=""/>
+										<p>401试剂仓库</p>
+										<h1>手动控制</h1>
+									</li>-->
+							</ol>
+						</div>
+					</div>
+					<div class="ups-system">
+						<div class="part-top">
+							<img src="" alt="" width="28px" height="28px"
+								style=" background:  url(assets/icon/bicon.png) no-repeat -48px 0px;" />
+							<span>UPS系统</span>
+						</div>
+						<div class="ups-section">
+							<ul>
+								<li class="has-side">
+									<!--<div class="li-top">
+											1#UPS   LC-MS/MS
+										</div>
+										<div class="li-section">
+											<ul>
+												<li>
+													<span>正常</span>
+													<b class="green"></b>
+												</li>
+												<li>
+													<span>电池</span>
+													<b></b>
+												</li>
+												<li>
+													<span>旁路</span>
+													<b></b>
+												</li>
+												<li>
+													<span>故障</span>
+													<b class="red"></b>
+												</li>
+											</ul>
+											<ol>
+												<li>
+													<span>负载</span>
+													<div>
+														<ul>
+															<li></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<span>电压输出</span>
+													<div>219</div>
+												</li>
+												<li>
+													<span>电量</span>
+													<div>
+														<ul>
+															<li></li>
+															<li></li>
+															<li></li>
+															<li></li>
+															<li></li>
+														</ul>
+													</div>
+												</li>
+											</ol>
+										</div>-->
+									<!-- <div class="ups_title">
+										1#UPS&nbsp;&nbsp;LC-MS/MS
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR01">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+									</div> -->
+									<svg id="C020002001SGCA1AR01" class="C020002001SGCA1AS01"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>1#UPS  LC-MS/MS</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+								<li class="has-side">
+									<!-- <div class="ups_title">
+										2#UPS&nbsp;&nbsp;ICP-MS
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR02">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										
+									</div> -->
+									<svg id="C020002001SGCA1AR02" class="C020002001SGCA1AS02"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>2#UPS  ICP-MS</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+								<li class="has-side">
+									<!-- <div class="ups_title">
+										3#UPS&nbsp;&nbsp;LC
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR03">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+									</div> -->
+									<svg id="C020002001SGCA1AR03" class="C020002001SGCA1AS03"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>3#UPS  LC</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+								<li class="has-side">
+									<!-- <div class="ups_title">
+										4#UPS&nbsp;&nbsp;GC-MS
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR04">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+									</div> -->
+									<svg id="C020002001SGCA1AR04" class="C020002001SGCA1AS04"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>4#UPS  GC-MS</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+								<li class="has-side">
+									<!-- <div class="ups_title">
+										5#UPS&nbsp;&nbsp;GC-MS/MS
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR05">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+									</div> -->
+									<svg id="C020002001SGCA1AR05" class="C020002001SGCA1AS05"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>5#UPS  GC-MS/MS</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+								<li class="has-side">
+									<!-- <div class="ups_title">
+										6#UPS&nbsp;&nbsp;ICP-OES
+									</div>
+									<div class="upselement_box" id="C020002001SGCA1AR06">
+										<div class="ups_element">
+											<span>正常</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>电池</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>旁路</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+										<div class="ups_element">
+											<span>故障</span>
+											<img src="./assets/icon/默认.png" alt="">
+										</div>
+									</div> -->
+									<svg id="C020002001SGCA1AR06" class="C020002001SGCA1AS06"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="100%" height="100%">
+										<text x="5%" y="16.5%" fill="white" font-size=".8rem" xml:space='preserve'>6#UPS  ICP-OES</text>
+										<rect x="0%" width="100%" height="0.5%" y="25%" fill="#313858" />
+										<text x="9%" y="38.5%" fill="white" font-size=".59rem">正常</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="20.5%"></image>
+										<text x="9%" y="55.5%" fill="white" font-size=".59rem">电池</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="37.5%"></image>
+										<text x="9%" y="73%" fill="white" font-size=".59rem">旁路</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="54.5%"></image>
+										<text x="9%" y="90.5%" fill="white" font-size=".59rem">故障</text>
+										<image id="" xlink:href="./assets/icon/默认.png" width="60%" height="30%" x="30%"
+											y="72.5%"></image>
+									</svg>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section-middle has-side">
+					<div class="gas-system">
+						<div class="part-top">
+							<img src="" alt="" width="28px" height="28px"
+								style=" background:  url(assets/icon/bicon.png) no-repeat -100px 0px;" />
+							<span>供气系统</span>
+						</div>
+						<div class="gas-section">
+							<div class="gas-left">
+
+							</div>
+							<div class="gas-right">
+								<div class="gas-right-top">
+
+								</div>
+								<div class="gas-right-bottom">
+									<div class="right-bottom-left">
+										<img src="assets/icon/fengshanGif.gif" alt="" />
+										<h1>手动控制</h1>
+									</div>
+									<div class="right-bottom-right">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wet-system">
+						<div class="part-top">
+							<img src="" alt="" width="28px" height="28px"
+								style=" background:  url(assets/icon/bicon.png) no-repeat -149px 0px;" />
+							<span>温湿度监控系统</span>
+						</div>
+						<div class="wet-section">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section-right has-side">
+					<div class="part-top">
+						<img src="" alt="" width="28px" height="28px"
+							style=" background:  url(assets/icon/bicon.png) no-repeat -200px 0px;" />
+						<span>报警信息</span>
+					</div>
+					<ul class="alarm-msg">
+
+					</ul>
+				</div>
+			</section>
+		</main>
+
+	</div>
+	<script id="flash" src='js/mainScreen.js'></script>
+</body>
+
+</html>

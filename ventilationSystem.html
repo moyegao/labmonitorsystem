@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通风系统</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/resert.css" />
+    <link rel="stylesheet" href="css/ventilationSystem.css" />
+    <script src='js/jquery.min.js'></script>
+    <script src='js/echarts.min.js'></script>
+</head>
+
+<body>
+    <div class="ventilation-system">
+        <!-- <div class="dataMsg">
+            <img src="./assets/icon/dataMsg.jpg" alt="">
+            <div id="failMsg"></div>
+        </div> -->
+        <header>
+            <div class="main-title">
+                <h1 class="title">实验室监控系统</h1>
+                <!-- <canvas id="myCanvas">
+                    Your browser does not support the HTML5 canvas tag.</canvas> -->
+                <div class="main-time">
+                </div>
+            </div>
+            <div class="system system_1">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat 0px 0px;" />
+                    <span>通风系统</span>
+                </div>
+            </div>
+            <div class="system system_2">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -48px 0px;" />
+                    <span>UPS系统</span>
+                </div>
+            </div>
+            <div class="system system_3">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -100px 0px;" />
+                    <span>供气系统</span>
+                </div>
+            </div>
+            <div class="system system_4">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -149px 0px;" />
+                    <span>温湿度监控系统</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="table_box">
+            <table class="tab_1">
+                <tr>
+                    <td rowspan="2" colspan="2">房间号</td>
+                    <td rowspan="2" colspan="2">参数</td>
+                    <td colspan="2">通风橱</td>
+                </tr>
+                <tr>
+                    <td>有机7#</td>
+                    <td>无机4#</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2">
+                        424<br />综合理化室
+                    </td>
+                    <td colspan="2">风量(m³/h)</td>
+                    <td id="C020002001SGAF1AF02"></td>
+                    <td id="C020002001SGAF1AG02"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">风速(m/s)</td>
+                    <td id="C020002001SGAF1AA02"></td>
+                    <td id="C020002001SGAF1AB02"></td>
+                </tr>
+            </table>
+
+            <table class="tab_2">
+                <tr>
+                    <td rowspan="2" colspan="2">房间号</td>
+                    <td rowspan="2" colspan="2">参数</td>
+                    <td>通风橱</td>
+                </tr>
+                <tr>
+                    <td>无机3#</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2">422<br />金属预处理室</td>
+                    <td colspan="2">风量(m³/h)</td>
+                    <td id="C020002001SGAF1AH01"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">风速(m/s)</td>
+                    <td id="C020002001SGAF1AC01"></td>
+                </tr>
+            </table>
+
+            <table class="tab_3">
+                <tr>
+                    <td rowspan="2" colspan="2">房间号</td>
+                    <td rowspan="2" colspan="2">参数</td>
+                    <td colspan="6">通风橱</td>
+                </tr>
+                <tr>
+                    <td>有机1#</td>
+                    <td>有机2#</td>
+                    <td>有机3#</td>
+                    <td>有机4#</td>
+                    <td>有机5#</td>
+                    <td>有机6#</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" colspan="2">403<br />有机大实验室</td>
+                    <td colspan="2">风量(m³/h)</td>
+                    <td id="C020002001SGAC1AI01"></td>
+                    <td id="C020002001SGAC1AI02"></td>
+                    <td id="C020002001SGAC1AI03"></td>
+                    <td id="C020002001SGAC1AI04"></td>
+                    <td id="C020002001SGAC1AI05"></td>
+                    <td id="C020002001SGAC1AI06"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">门高(mm)</td>
+                    <td id="C020002001SGAC1AJ01"></td>
+                    <td id="C020002001SGAC1AJ02"></td>
+                    <td id="C020002001SGAC1AJ03"></td>
+                    <td id="C020002001SGAC1AJ04"></td>
+                    <td id="C020002001SGAC1AJ05"></td>
+                    <td id="C020002001SGAC1AJ06"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">风速(m/s)</td>
+                    <td id="C020002001SGAC1AK01"></td>
+                    <td id="C020002001SGAC1AK02"></td>
+                    <td id="C020002001SGAC1AK03"></td>
+                    <td id="C020002001SGAC1AK04"></td>
+                    <td id="C020002001SGAC1AK05"></td>
+                    <td id="C020002001SGAC1AK06"></td>
+                </tr>
+            </table>
+
+            <table class="tab_4">
+                <tr>
+                    <td rowspan="2" colspan="2">房间号</td>
+                    <td rowspan="2" colspan="2">参数</td>
+                    <td colspan="2">通风橱</td>
+                </tr>
+                <tr>
+                    <td>无机1#</td>
+                    <td>无机2#</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2">407<br />放射性预处理室</td>
+                    <td colspan="2">风量(m³/h)</td>
+                    <td id="C020002001SGAF1AF01"></td>
+                    <td id="C020002001SGAF1AG01"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">风速(m/s)</td>
+                    <td id="C020002001SGAF1AA01"></td>
+                    <td id="C020002001SGAF1AB01"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="fengji_box1">
+            <div class="fengji_1">
+                <p class="p3">407风机</p>
+                <img id="C020002001SGAA1AA02" src="./assets/icon/fengji.gif" alt="">
+
+            </div>
+            <div class="fengji_2">
+                <p>409/411风机</p>
+                <img id="C020002001SGAA1AA03" src="./assets/icon/fengji.gif" alt="">
+            </div>
+            <div class="fengji_3">
+                <p class="p3">419风机</p>
+                <img id="C020002001SGAA1AA06" src="./assets/icon/fengji.gif" alt="">
+            </div>
+            <div class="fengji_4">
+                <p class="p3">421风机</p>
+                <img id="C020002001SGAA1AA05" src="./assets/icon/fengji.gif" alt="">
+            </div>
+            
+            <!-- 新加 -->
+            <div class="fengji_6">
+                <p class="p3">423风机</p>
+                <img id="C020002001SGAA1AA08" src="./assets/icon/fengji.gif" alt="">
+            </div>
+            <div class="fengji_5">
+                <p>427/429风机</p>
+                <img id="C020002001SGAA1AA07" src="./assets/icon/fengji.gif" alt="">
+            </div>
+        </div>
+
+        <div class="ventilationSystem-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
+                height="100%">
+                <g>
+                    <image xlink:href="./assets/icon/排风扇2.png" width="100%" height="100%" />
+
+                    <image class="fengzhao_10" id="C020002001SGAB1AD01" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="24.2%" y="20%"></image>
+                    <image class="fengzhao_11" id="C020002001SGAB1AB02" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="26.8%" y="20%"></image>
+                    <image class="fengzhao_12" id="C020002001SGAB1AD02" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="30.5%" y="20%"></image>
+                    <image class="fengzhao_13" id="C020002001SGAB1AB03" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="33.1%" y="20%"></image>
+                    <image class="fengzhao_14" id="C020002001SGAB1AA05" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="55%" y="20%"></image>
+                    <image class="fengzhao_15" id="C020002001SGAB1AB04" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="58.8%" y="20%"></image>
+                    <image class="fengzhao_16" id="C020002001SGAB1AA04" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="61.5%" y="20%"></image>
+
+                        <!-- 新加 -->
+                    <image class="fengzhao_423_1" id="C020002001SGAB1AA09" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="66.2%" y="20%"></image>
+
+                    <image class="fengzhao_17" id="C020002001SGAB1AB05" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="76.5%" y="20%"></image>
+                    <image class="fengzhao_18" id="C020002001SGAB1AA06" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="79.2%" y="20%"></image>
+                    <image class="fengzhao_19" id="C020002001SGAB1AA07" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="83.5%" y="20%"></image>
+
+                    <image class="fengzhao_21" id="C020002001SGAB1AC01" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="24.2%" y="30%"></image>
+                    <image class="fengzhao_22" id="C020002001SGAB1AA02" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="26.8%" y="30%"></image>
+                    <image class="fengzhao_23" id="C020002001SGAB1AC02" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="30.4%" y="30%"></image>
+                    <image class="fengzhao_24" id="C020002001SGAB1AA03" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="33%" y="30%"></image>
+                    <image class="fengzhao_25" id="C020002001SGAB1AC03" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="77.9%" y="30%"></image>
+
+                    <image class="fengzhao_31" id="C020002001SGAB1AA01" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="13%" y="75%"></image>
+                    <image class="fengzhao_32" id="C020002001SGAB1AB01" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="15.6%" y="75%"></image>
+                    <image class="fengzhao_33" id="C020002001SGAB1AA08" xlink:href="./assets/icon/排风罩拷贝2.png" width="8%"
+                        height="8%" x="89%" y="87%"></image>
+
+                    <image class="feng_1" id="C020002001SGAE1AA01" xlink:href="./assets/icon/feng.gif" width="8%"
+                        height="8%" x="0" y="27%">
+                    </image>
+                    <image class="feng_2" id="C020002001SGAE1AA03" xlink:href="./assets/icon/feng.gif" width="8%"
+                        height="8%" x="92%" y="21%">
+                    </image>
+                    <image class="feng_3" id="C020002001SGAE1AA02" xlink:href="./assets/icon/feng.gif" width="8%"
+                        height="8%" x="0" y="67%">
+                    </image>
+                    <rect x="1.85%" width="4.2%" height="14%" y="24%" fill-opacity="0" stroke="white"
+                        stroke-width="1px" />
+                    <text x="1.8%" y="23%" fill="white" font-size="0.7rem">有机试剂柜</text>
+
+                    <rect class="paifengchu_407_2 C020002001SGAF1AQ02" id="C020002001SGAC1AL08" x="21.95%" width="1.1%" height="10%" y="20.2%"
+                        fill="#00D640" />
+
+                    <rect class="paifengchu_407_1 C020002001SGAF1AQ01" id="C020002001SGAC1AL07" x="21.95%" width="1.1%" height="10%" y="32.7%"
+                        fill="#00D640" />
+
+                    <rect class="paifengchu_403_1 C020002001SGAC1AG01 C020002001SGAC1AH01" id="C020002001SGAC1AL01" x="10.7%" width="1.1%" height="10%" y="60.4%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_403_4 C020002001SGAC1AG04 C020002001SGAC1AH04" id="C020002001SGAC1AL04" x="24.6%" width="1.1%" height="10%" y="61%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_424_4 C020002001SGAF1AQ05" id="C020002001SGAC1AL11" x="85.7%" width="1.1%" height="10%" y="65.7%"
+                        fill="#00D640" />
+
+                    <rect class="paifengchu_403_2 C020002001SGAC1AG02 C020002001SGAC1AH02" id="C020002001SGAC1AL02" x="10.7%" width="1.1%" height="10%" y="73%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_403_5 C020002001SGAC1AG05 C020002001SGAC1AH05" id="C020002001SGAC1AL05" x="24.6%" width="1.1%" height="10%" y="73.5%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_422_3 C020002001SGAF1AQ03" id="C020002001SGAC1AL09" x="82.65%" width="1.1%" height="10%" y="78.5%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_424_7 C020002001SGAF1AQ04" id="C020002001SGAC1AL10" x="85.7%" width="1.1%" height="10%" y="78.5%"
+                        fill="#00D640" />
+
+                    <rect class="paifengchu_403_3 C020002001SGAC1AG03 C020002001SGAC1AH03" id="C020002001SGAC1AL03" x="10.7%" width="1.1%" height="10%" y="85.5%"
+                        fill="#00D640" />
+                    <rect class="paifengchu_403_6 C020002001SGAC1AG06 C020002001SGAC1AH06" id="C020002001SGAC1AL06" x="24.6%" width="1.1%" height="10%" y="86%"
+                        fill="#00D640" />
+
+                        <!-- 407 -->
+                        <text x="23.5%" y="26%" fill="white" font-size="0.7rem">无机2#</text>
+                        <text x="23.5%" y="38%" fill="white" font-size="0.7rem">无机1#</text>
+                        <!-- 403 -->
+                        <text x="12.2%" y="66.5%" fill="white" font-size="0.7rem">有机1#</text>
+                        <text x="12.2%" y="79.5%" fill="white" font-size="0.7rem">有机2#</text>
+                        <text x="12.2%" y="92%" fill="white" font-size="0.7rem">有机3#</text>
+                        <text x="22.0%" y="66.5%" fill="white" font-size="0.7rem">有机4#</text>
+                        <text x="22.0%" y="79.6%" fill="white" font-size="0.7rem">有机5#</text>
+                        <text x="22.0%" y="92%" fill="white" font-size="0.7rem">有机6#</text>
+                        <!-- 422 -->
+                        <text x="79.5%" y="85%" fill="white" font-size="0.7rem">无机3#</text>
+                        <!-- 424 -->
+                        <text x="87.2%" y="84.5%" fill="white" font-size="0.7rem">有机7#</text>
+                        <text x="87.2%" y="71.5%" fill="white" font-size="0.7rem">无机4#</text>
+
+                </g>
+            </svg>
+        </div>
+
+        <div class="fengji_box2">
+            <div class="fengji_6">
+                <img id="C020002001SGAA1AA01" src="./assets/icon/fengji.gif" alt="">
+                <p class="p3">403风机</p>
+            </div>
+            <div class="tab5_box">
+                <table class="tab_5">
+                    <tr style="height: 2rem">
+                        <td>
+                            <img src="" alt="" width="24px" height="24px"
+                                style=" background:  url(assets/icon/bicon.png) no-repeat -230px -41px;" />
+                            活性炭
+                        </td>
+                    </tr>
+                    <tr style="height: 2rem">
+                        <td id="huoxingtan" class="C020002001SGAG1AG01 C020002001SGAG1AH01 C020002001SGAG1AI01 C020002001SGAG1AF01"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fengji_7">
+                <img id="C020002001SGAA1AA04" src="./assets/icon/fengji.gif" alt="">
+                <p>422/424风机</p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    <style>
+
+    </style>
+    <script src='js/ventilationSystem.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>温湿度</title>
+    <meta name="viewport" content="width=240, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div>
+    <header id="header" class="linearBar mui-bar mui-bar-nav">
+        <h1 class="mui-title">温湿度</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item1 active" href="index.html">
+            <span class="mui-icon icon-home"></span>
+            <span class="mui-tab-label">通风</span>
+        </a>
+        <a class="mui-tab-item1" href="ups.html">
+            <span class="mui-icon icon-UPS"></span>
+            <span class="mui-tab-label">UPS</span>
+        </a>
+        <a class="mui-tab-item1" href="airFeed.html">
+            <span class="mui-icon icon-air"></span>
+            <span class="mui-tab-label">供气</span>
+        </a>
+        <a class="mui-tab-item1" href="humidity.html">
+            <span class="mui-icon icon-temperature active"></span>
+            <span class="mui-tab-label active">温湿度</span>
+        </a>
+        <a class="mui-tab-item1" href="giveAnAlarm.html">
+            <span class="mui-icon icon-plice"></span>
+            <span class="mui-tab-label">报警</span>
+        </a>
+        <a class="mui-tab-item1" href="cutScreen.html">
+            <span class="mui-icon icon-cut"></span>
+            <span class="mui-tab-label">切屏</span>
+        </a>
+    </nav>
+    <section>
+        <div class="section">
+
+            <!--控制-->
+            <div class="sd-humidity">
+                <div class="c-title">数据</div>
+                <div class="c-con">
+                    <div class="c-con-list">
+                        <div class="c-con-list-title tit1">环境</div>
+                        <div class="c-con-list-con">
+                            <div><span style="background: #e6e6e6;color: #333;">在线</span><br><span>0</span></div>
+                            <div><span style="background: #49cc7b;">正常</span><br><span>2</span></div>
+                            <div><span style="background: #fa7268;">报警</span><br><span>1</span></div>
+                            <div><span style="background: #faa646;">离线</span><br><span>23</span></div>
+                        </div>
+                    </div>
+                    <div class="c-con-list">
+                        <div class="c-con-list-title tit2">冰箱</div>
+                        <div class="c-con-list-con">
+                            <div><span style="background: #e6e6e6;color: #333;">在线</span><br><span>0</span></div>
+                            <div><span style="background: #e6e6e6;color: #333;">正常</span><br><span>2</span></div>
+                            <div><span style="background: #e6e6e6;color: #333;">报警</span><br><span>1</span></div>
+                            <div><span style="background: #faa646;">离线</span><br><span>23</span></div>
+                        </div>
+                    </div>
+                    <div class="c-con-list">
+                        <div class="c-con-list-title tit3">培养箱</div>
+                        <div class="c-con-list-con">
+                            <div><span style="background: #49cc7b;">在线</span><br><span>0</span></div>
+                            <div><span style="background: #49cc7b;">正常</span><br><span>2</span></div>
+                            <div><span style="background: #fa7268;color: #333;">报警</span><br><span>1</span></div>
+                            <div><span style="background: #faa646;">离线</span><br><span>23</span></div>
+                        </div>
+                    </div>
+                   <!-- 406生物与处理室-->
+                    <div class="manage-room">
+                        <div class="manage-room-title"><span></span>406生物与处理室</div>
+                        <div class="manage-room-list">
+                            <span class="span1">B-052</span><span class="span2" style="color: #3193f5;">26.8℃</span>
+                        </div>
+                        <div class="manage-room-list">
+                            <span class="span1">B-053</span><span class="span2" style="color: #fa7268;">35.6℃</span>
+                        </div>
+
+                        <div class="echarts-line">
+                            <div class="dateShow">2019-05-01</div>
+                            <div class="dateCut"><span style="border-right: 1px solid #3193f5"><</span><span>></span></div>
+                            <div id="echarts_post" class="echarts_post" style="width:100%; height: 250px;overflow: hidden"></div>
+                        </div>
+
+                        <div class="manage-room-list" style="margin: 0">
+                            <span class="span1">B-053</span><span class="span2" style="color: #666666;">35.6℃</span>
+                        </div>
+
+                    </div>
+
+                    <div class="manage-room">
+                        <div class="manage-room-title" style="background-color: #3193f5;"><span></span>406生物与处理室</div>
+                        <div class="manage-room-list">
+                            <span class="span1">B-052</span><span class="span2" style="color: #3193f5;">26.8℃</span>
+                        </div>
+                        <div class="manage-room-list">
+                            <span class="span1">B-052</span><span class="span2" style="color: #3193f5;">26.8℃</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script>
+    $(function () {
+
+    })
+
+    var myChart1 = echarts.init(document.getElementById('echarts_post'));
+    option = {
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line',
+            smooth: true,
+            itemStyle : {
+                normal : {
+                    color:"#3193f5",
+                    lineStyle:{
+                        color:'#3193f5'
+                    }
+                }
+            }
+        }]
+    };
+    myChart1.setOption(option);
+
+
+</script>
+
+</body>
+</html>

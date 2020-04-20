@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>供气系统</title>
+    <meta name="viewport" content="width=240, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div>
+    <header id="header" class="linearBar mui-bar mui-bar-nav">
+        <h1 class="mui-title">供气系统</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item1 active" href="index.html">
+            <span class="mui-icon icon-home"></span>
+            <span class="mui-tab-label">通风</span>
+        </a>
+        <a class="mui-tab-item1" href="ups.html">
+            <span class="mui-icon icon-UPS"></span>
+            <span class="mui-tab-label">UPS</span>
+        </a>
+        <a class="mui-tab-item1" href="airFeed.html">
+            <span class="mui-icon icon-air active"></span>
+            <span class="mui-tab-label active">供气</span>
+        </a>
+        <a class="mui-tab-item1" href="humidity.html">
+            <span class="mui-icon icon-temperature"></span>
+            <span class="mui-tab-label">温湿度</span>
+        </a>
+        <a class="mui-tab-item1" href="giveAnAlarm.html">
+            <span class="mui-icon icon-plice"></span>
+            <span class="mui-tab-label">报警</span>
+        </a>
+        <a class="mui-tab-item1" href="cutScreen.html">
+            <span class="mui-icon icon-cut"></span>
+            <span class="mui-tab-label">切屏</span>
+        </a>
+    </nav>
+    <section>
+        <div class="section">
+
+            <!--数据-->
+            <div class="airFeed">
+                <div class="c-title">数据</div>
+                <div class="c-con">
+
+                    <div class="gq-progress gq-progress1">
+                        <div class="div1">He - 1#</div>
+                        <div class="div2" id="demo1" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress2">
+                        <div class="div1">He - 2#</div>
+                        <div class="div2" id="demo2" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress3">
+                        <div class="div1">Ar - 1#</div>
+                        <div class="div2" id="demo3" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress4">
+                        <div class="div1">Ar - 1#</div>
+                        <div class="div2" id="demo4" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">100%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress5">
+                        <div class="div1">N2 - 1#</div>
+                        <div class="div2" id="demo5" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress6">
+                        <div class="div1">Ar - 1#</div>
+                        <div class="div2" id="demo6" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+                    <div class="gq-progress gq-progress7">
+                        <div class="div1">空气 - 1#</div>
+                        <div class="div2" id="demo7" class="mui-text-center">
+                            <p class="mui-progressbar mui-progressbar-in" data-progress=""><span></span></p>
+                        </div>
+                        <div class="div3">23%</div>
+                    </div>
+
+
+                    <div class="timeControl">
+                        <div class="timeControlT">
+                            <div class="div1"></div>    <!--bgPlay-->
+                            <div class="div2">时间控制</div>
+                        </div>
+                        <div class="timeControlS">
+                            <p class="p1"><span>温度</span><br><span>22℃</span></p>
+                            <p class="p2"><span>湿度</span><br><span>54.7%</span></p>
+                            <p class="p3"><span>氧气</span><br><span>20.6%</span></p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+</div>
+
+<script>
+
+    var progressbar1 = mui('#demo1');
+    mui(progressbar1).progressbar().setProgress(10)
+
+    var progressbar2 = mui('#demo2');
+    mui(progressbar2).progressbar().setProgress(20)
+
+    var progressbar3 = mui('#demo3');
+    mui(progressbar3).progressbar().setProgress(30)
+
+    var progressbar4 = mui('#demo4');
+    mui(progressbar4).progressbar().setProgress(100)
+
+    var progressbar5 = mui('#demo5');
+    mui(progressbar5).progressbar().setProgress(80)
+
+    var progressbar6 = mui('#demo6');
+    mui(progressbar6).progressbar().setProgress(40)
+
+    var progressbar7 = mui('#demo7');
+    mui(progressbar7).progressbar().setProgress(10)
+
+
+
+    $(function () {
+
+    })
+
+
+</script>
+
+</body>
+</html>

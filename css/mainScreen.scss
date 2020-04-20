@@ -1,0 +1,465 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+//边角设置
+.has-side{
+                    border: 1px solid #1D2C5E;
+                    position: relative;
+                    &>sub{
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        
+                    }
+                    .side-left-top{
+                        left: -1px;
+                        top:-1px;
+                        border-top:1px solid  #5C7BD9;
+                        border-left:1px solid  #5C7BD9;
+                    }
+                    .side-right-top{
+                        right:-1px;
+                        top:-1px;
+                        border-top:1px solid  #5C7BD9;
+                        border-right:1px solid  #5C7BD9;
+                    }
+                    .side-left-bottom{
+                        bottom:-1px;
+                        left:-1px;
+                        border-bottom:1px solid  #5C7BD9;
+                        border-left:1px solid  #5C7BD9;
+                    }
+                    .side-right-bottom{
+                        bottom:-1px;
+                        right:-1px;
+                        border-bottom:1px solid  #5C7BD9;
+                        border-right:1px solid  #5C7BD9;
+                    }
+}
+                
+.main-screen{
+    height: 100%;
+    width: 100%;
+    /*border:1px solid red;*/
+    background: #040D2E;
+    box-sizing: border-box;
+    header{
+        height: 10%;
+        /*border:1px solid yellow;*/
+        box-sizing: border-box;
+        background: url('../assets/topbg.png');
+        background-size: 100% 100%;
+        position: relative;
+        .main-title{
+            width: 20%;
+            height: 75%;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            .title{
+            text-align: center;
+             font-size: 1.9em; 
+             background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(84,184,255, 1)), to(rgba(58,125,253, 1)));
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+};
+            /*border:1px solid red;*/
+        }
+        .main-time{
+            text-align: center;
+        }
+    }
+    main{
+            height: 90%;
+            /*border:1px solid blue;*/
+            box-sizing: border-box;
+            padding: 20px;
+            section{
+                /*border:1px solid green;*/
+                box-sizing: border-box;
+                height: 100%;
+                width: 100%;
+                .part-top{
+                   
+                    line-height: 50px;
+                    background: #012791;
+                    padding-left:30px;
+                    background: #002daa;
+                    img{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+          
+                &>div{
+                    height: 100%;
+                    box-sizing: border-box;
+                    float:left;
+                    /*1880px 525px 935px 350px*/
+                    &.section-left{
+                        width: 30%;
+                        height: 100%;
+                        .vent-system{
+                            height: 50%;
+                            .vent-section{
+                                padding: 20px 40px;
+                                height: calc(100% - 50px);
+                                li{
+                                    width: 30%;
+                                    &:nth-child(2){
+                                        margin: 0 5%;
+                                    }
+                                    /*border:1px solid #5C7BD9;*/
+                                }
+                                ul{
+                                    height: 60%;
+                                    li{
+                                        height: 100%;
+                                        float:left;
+                                    }
+                                }
+                                ol{
+                                    height: 40%;
+                                    li{
+                                        height: 100%;
+                                        float:left;
+                                        text-align: center;
+                                        padding-top: 20px;
+                                        img{
+                                            height: 60%;
+                                        }
+                                        p{
+                                                font-size: 0.6rem;
+                                                color: #fa840f;
+                                        }
+                                        h1{
+                                                font-size: 0.7rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .ups-system{
+                            height: 50%;
+                            
+                            .ups-section{
+                                /*padding: 20px;*/
+                                height: calc(100% - 50px);
+                                &>ul{
+                                    height: 100%;
+                                    width: 100%;
+                                    &>li{
+                                        float: left;
+                                        /*border:1px solid yellow;*/
+                                        width: calc(33.33% - 20px);
+                                        height: calc(50% - 22.5px);
+                                        margin: 15px 0 0 15px;
+                                        font-size:12px;
+                                        padding:5px;
+                                        .li-top{
+                                            height:35px;
+                                            line-height:35px;
+                                        }
+                                        .li-section{
+                                            height:calc(100% - 35px);
+                                            
+                                            ul{
+                                                height:100%;
+                                                float:left;
+                                                width:30px;
+                                                
+                                                li{
+                                                    height:25%;
+                                                    /*padding:2px;*/
+                                                    span{
+                                                        display:block;
+                                                        height:50%;
+                                                        width:100%;
+                                                        text-align:center;
+                                                    }
+                                                    b{
+                                                        
+                                                        height:35%;
+                                                        width:80%;
+                                                        margin:auto;
+                                                        margin-top:2px;
+                                                        border-radius:3px;
+                                                        background:#9f9f9f;
+                                                        display:block;
+                                                        &.green{
+                                                            background:#07c260;
+                                                        }
+                                                        &.red{
+                                                            background: red;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            ol{
+                                                width:calc(100% - 30px);
+                                                float:left;
+                                                height:100%;
+                                                background:#313858;
+                                                padding:0 5px;
+                                                &>li{
+                                                    height:33.33%;
+                                                    border-bottom:1px solid #464C6C;
+                                                    padding:2px 0;
+                                                    &::after{
+                                                            content: "";
+                                                            display: block;
+                                                            clear: both;
+                                                    }
+                                                    span{
+                                                        float:left;
+                                                        width:30px;
+                                                        height:100%;
+                                                        /*padding:1px;*/
+                                                    }
+                                                    &:not(:nth-child(2)){
+                                                            span{
+                                                                line-height:3;
+                                                                }
+                                                        }
+                                                    div{
+                                                        float:left;
+                                                        line-height:33px;
+                                                        font-size:1rem ;
+                                                        text-align: center;
+                                                        width:calc(100% - 30px);
+                                                        /*padding: 3px 0;*/
+                                                        position: relative;
+                                                        height: 100%;
+                                                        ul{
+                                                            border:1px solid #fff;
+                                                            position: absolute;
+                                                            top:0;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            margin: auto;
+                                                            height: 70%;
+                                                            width: 80%;
+                                                            border-radius: 2px;
+                                                            li{
+                                                                float: left;
+                                                                width: 20%;
+                                                                border:1px solid #313858;
+                                                                height: 100%;
+                                                                border-radius: 1px;
+                                                                background: #fff;
+                                                            }
+                                                            i{
+                                                            content: "";
+                                                            display: block;
+                                                            position: absolute;
+                                                            height: 80%;
+                                                            width: 3px;
+                                                            right: -4px;
+                                                            top:2px;
+                                                            background: #fff;
+                                                            border-bottom-right-radius: 2px;
+                                                            border-top-right-radius: 2px;
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    &.section-middle{
+                        width: 50%;
+                        margin: 0 0.7%;
+                        .gas-system{
+                            height: 50%;
+                            .gas-section{
+                                padding: 10px 30px;
+                                height: calc(100% - 50px);
+                                &>div{
+                                    float:left;
+                                   
+                                    height:100%;
+                                    &.gas-left{
+                                         width: 60%;
+                                    }
+                                    /*border: 1px solid dodgerblue;*/
+                                    &.gas-right{
+                                         width: 40%;
+                                        .gas-right-top{
+                                            height: 60%;
+                                            /*border:1px solid red;*/
+                                        }
+                                        .gas-right-bottom{
+                                            height: 40%;
+                                            /*border:1px solid red;*/
+                                            &>div{
+                                                float:left;
+                                                &.right-bottom-left{
+                                                    width: 40%;
+                                                    height: 100%;
+                                                    /*border:1px solid yellow;*/
+                                                    padding:1rem;
+                                                    text-align: center;
+                                                    img{
+                                                        height: 80%;
+                                                    }
+                                                    h1{
+                                                        font-size: 0.7rem;
+                                                    }
+                                                    }
+                                                &.right-bottom-right{
+                                                        width: 60%;
+                                                        height: 100%;
+                                                        /*border:1px solid yellow;*/
+                                                        padding:20px;
+                                                        ul{
+                                                            height: 100%;
+                                                            border-bottom:1px solid #fff;
+                                                            border-right:1px solid #fff;
+                                                            li{
+                                                                height: 50%;
+                                                                p{
+                                                                    width: 50%;
+                                                                    height: 100%;
+                                                                    line-height:3;
+                                                                    float:left;
+                                                                    border-top:1px solid #fff;
+                                                                    border-left:1px solid #fff;
+                                                                    text-align: center;
+                                                                    font-size: .9rem;
+                                                                    img{
+                                                                        display:inline-block;
+                                                                        margin-bottom:-3px;
+                                                                    }
+                                                                    span{
+                                                                        display:inline-block;
+                                                                    }
+                                                                }
+                                                            }
+                            
+                                                        }
+                                                        
+                                                    }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .wet-system{
+                            height: 50%;
+                            
+                            .wet-section{
+                                /*padding: 20px;*/
+                                height: calc(100% - 50px);
+                                ul{
+                                    height: 100%;
+                                    width: 100%;
+                                    li{
+                                        float: left;
+                                        margin: 20px 0 0 15px;
+                                        width: calc(33.33% - 20px);
+                                        height: calc(100% - 40px);
+                                        .li-top{
+                                            text-align: center;
+                                            height: 30px;
+                                            padding-top:10px;
+                                            img{
+                                                 display: inline-block;
+                                                 vertical-align: middle;
+                                            }
+                                        }
+                                        ol{
+                                            height: calc(100% - 30px);
+                                            li{
+                                                float:left;
+                                                height: calc(50% - 30px);
+                                                width: calc(50% - 30px);
+                                                margin-left:20px;
+                                                margin-top:20px;
+                                                background:#002078;
+                                                text-align:center;
+                                              
+                                                .green{
+                                                     background:url('../assets/icon/green.png');
+                                                }
+                                                .greenT{
+                                                     background:url('../assets/icon/greenT.png');
+                                                }
+                                               .gray{
+                                                     background:url('../assets/icon/gray.png');
+                                                }
+                                                .grayT{
+                                                     background:url('../assets/icon/grayT.png');
+                                                }
+                                                .oragneT{
+                                                     background:url('../assets/icon/oragneT.png');
+                                                }
+                                                .red{
+                                                     background:url('../assets/icon/red.png');
+                                                }
+                                                .top{
+                                                    height:45%;
+//                                                   background:url('../assets/icon/green.png');
+                                                    background-size: 100% 100%;
+                                                    padding-top:10%;
+                                                }
+                                                .bottom{
+                                                    height:55%;
+                                                    padding-top:15%;
+                                                }       
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    &.section-right{
+                        width: 18.6%;
+                        .alarm-msg{
+                            overflow: hidden;
+                            height: calc(100% - 50px);
+                            padding: 0 20px;
+                            li{
+                                
+                                height: 16.66%;
+                                padding: 20px 0;
+                                div{
+                                    /*border: 1px solid greenyellow;*/
+                                    /*height:calc(50% - 20px);*/
+                                    height:50%
+                                }
+                                p{
+                                    /*border:1px solid antiquewhite;*/
+                                    /*height:calc(50% - 20px);*/
+                                    padding-top:15px;
+                                    height:50%;
+                                    text-align: right;
+                                    color:#32CBFE;
+                                }
+                            }
+                            li:not(:last-child){
+                                border-bottom:1px solid #414860;
+                            
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

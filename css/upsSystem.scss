@@ -1,0 +1,295 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.ups-system{
+    height: 100%;
+    width: 100%;
+    /*border:1px solid red;*/
+    background: #040D2E;
+    box-sizing: border-box;
+    header{
+        height: 10%;
+        /*border:1px solid yellow;*/
+        box-sizing: border-box;
+        background: url('../assets/topbg.png');
+        background-size: 100% 100%;
+        position: relative;
+        .main-title{
+            width: 20%;
+            height: 75%;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /*border:1px solid red;*/
+        }
+        .main-time{
+            text-align: center;
+        }
+        .system{
+              display: inline-block;
+              position: relative;
+              border: solid 1px #93beff;
+              border-radius: 8px;
+              background-color: #0F2457;
+              height: 45%;
+              margin-top: 3%;
+              color: #9B9CA4;
+              img{
+                 vertical-align: middle;
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+              } 
+              .systemBox {
+              height: 100%;
+              width: 70%;
+              margin-left: 10%;
+            }
+            span {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              margin-left: 25%;
+            }   
+        }
+        .system_1{
+              width: 7.6%;
+             margin-left: 17.46%;
+            span{
+                 margin-left: 24%;
+            }
+           
+        }
+          .system_2{
+            width: 7.6%;
+            margin-left: 2.28%;
+            span{
+                 margin-left: 24%;
+            }
+           
+        }
+          .system_3{
+            width: 7.6%;
+            margin-left: 29.63%;
+            span{
+                 margin-left: 24%;
+            }
+           
+        }
+          .system_4{
+            width: 10%;
+            margin-left: 1.77%;
+            span{
+                  margin-left: 10%;
+            }
+            img {
+              margin-left: -7%;
+              /* width: 20%;   */
+            }              
+        }
+
+    }
+    section{
+        height: 90%;
+        padding: 80px 115px;
+        box-sizing: border-box;
+        .ups-section{
+            
+                                /*padding: 20px;*/
+//                              height: calc(100% - 50px);
+                                height: 100%;
+                                &>ul{
+                                    height: 100%;
+                                    width: 100%;
+                                    &>li{
+                                        float: left;
+                                        /*border:1px solid yellow;*/
+                                        width: calc(33.33% - 20px);
+                                        height: calc(50% - 22.5px);
+                                        margin: 15px 0 0 15px;
+                                        font-size:12px;
+                                        
+//                                      padding:5px;
+                                        .li-top{
+                                            background-color: #002daa;
+                                            height:40px;
+                                            line-height:40px;
+                                            font-size:18px;
+                                            padding-left: 20px;
+                                        }
+                                        .li-section{
+                                            padding: 20px;
+                                            height:calc(100% - 40px);
+                                            .li-section-top{
+                                                height: 70%;
+                                                border-bottom:1px dashed #313853;
+                                                padding-bottom: 50px;
+                                                position: relative;
+                                                &>p{
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    height: 50px;
+                                                    line-height: 50px;
+                                                    font-size: .9rem;
+                                                    font-weight: normal;
+                                                    font-stretch: normal;
+                                                    letter-spacing: 0px;
+                                                    color: #fa3232;
+                                                    padding-left: 20px;
+                                                }
+                                                ul{
+                                                height:100%;
+                                                float:left;
+                                                width:80px;
+                                                
+                                                li{
+                                                    height:25%;
+                                                    padding-right: 15px;
+//                                                  /*padding:2px;*/
+
+                                                    span{
+                                                        display:block;
+                                                        height:50%;
+                                                        width:100%;
+                                                        text-align:center;
+                                                    }
+                                                    b{
+                                                        
+                                                        height:35%;
+                                                        width:35%;
+                                                        margin:auto;
+                                                        margin-top:2px;
+                                                        border-radius:3px;
+                                                        background:#9f9f9f;
+                                                        display:block;
+                                                        &.green{
+                                                            background:#07c260;
+                                                        }
+                                                        &.red{
+                                                            background: red;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            ol{
+                                                width:calc(100% - 100px);
+                                                float:left;
+                                                height:100%;
+                                                background:#313858;
+                                                padding:0 5px 0 20px;
+                                                margin: 0 20px 0 0;
+                                                border-radius: 3px;
+                                                &>li{
+                                                    height:33.33%;
+//                                                  border-bottom:1px solid #464C6C;
+                                                   
+                                                     &:not(:last-child){
+                                                          border-bottom:1px solid #464C6C;
+                                                     }
+                                                    padding:2px 0;
+                                                    &::after{
+                                                            content: "";
+                                                            display: block;
+                                                            clear: both;
+                                                    }
+                                                    span{
+                                                        float:left;
+                                                        width:90px;
+                                                        height:100%;
+                                                        line-height:3;
+                                                        /*padding:1px;*/
+                                                    }
+//                                                  &:not(:nth-child(2)){
+//                                                          span{
+//                                                              line-height:3;
+//                                                              }
+//                                                      }
+                                                    div{
+                                                        color:#f68a0a;
+                                                        float:left;
+                                                        line-height:33px;
+                                                        font-size:1rem ;
+                                                        text-align: center;
+                                                        width:calc(100% - 155px);
+                                                        /*padding: 3px 0;*/
+                                                        position: relative;
+                                                       
+                                                        height: 100%;
+                                                        ul{
+                                                            
+                                                            border:1px solid #fff;
+                                                            position: absolute;
+                                                            top:0;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            margin: auto;
+                                                            height: 55%;
+                                                            width: 80%;
+                                                            border-radius: 2px;
+                                                            li{
+                                                                float: left;
+//                                                              width: 36%;
+//                                                              border:1px solid #313858;
+                                                                height: 100%;
+                                                                border-radius: 1px;
+                                                                background: #0fcf2a;
+                                                                padding: 0;
+                                                            }
+                                                            
+                                                            i{
+                                                            content: "";
+                                                            display: block;
+                                                            position: absolute;
+                                                            height: 60%;
+                                                            width: 2px;
+                                                            right: -3px;
+                                                            top:4px;
+                                                            background: #fff;
+                                                            border-bottom-right-radius: 2px;
+                                                            border-top-right-radius: 2px;
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                    p{
+                                                        color:#f68a0a;
+                                                        float:left;
+                                                        width: 65px;
+                                                        height: 100%;
+                                                        line-height: 2.2;
+                                                        font-size: .9rem;
+                                                        
+                                                    }
+                                                }
+                                            }
+                                            }
+                                            .li-section-bottom{
+                                                height: 30%;
+                                                ul{
+                                                    height: 100%;
+                                                    li{
+                                                        font-size: .9rem;
+                                                        width: calc(50% - 20px);
+                                                        float:left;
+                                                        margin-top: 15px;
+                                                        margin-left: 20px;
+                                                    }
+                                                }
+                                            }
+                                          
+                                        }
+                                    }
+                                }
+                            
+        }
+    }
+    
+}

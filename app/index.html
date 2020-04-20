@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通风系统</title>
+    <meta name="viewport" content="width=240, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div>
+        <header id="header" class="linearBar mui-bar mui-bar-nav">
+            <h1 class="mui-title">通风系统</h1>
+        </header>
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item1 active" href="index.html">
+                <span class="mui-icon icon-home active"></span>
+                <span class="mui-tab-label active">通风</span>
+            </a>
+            <a class="mui-tab-item1" href="ups.html">
+                <span class="mui-icon icon-UPS"></span>
+                <span class="mui-tab-label">UPS</span>
+            </a>
+            <a class="mui-tab-item1" href="airFeed.html">
+                <span class="mui-icon icon-air"></span>
+                <span class="mui-tab-label">供气</span>
+            </a>
+            <a class="mui-tab-item1" href="humidity.html">
+                <span class="mui-icon icon-temperature"></span>
+                <span class="mui-tab-label">温湿度</span>
+            </a>
+            <a class="mui-tab-item1" href="giveAnAlarm.html">
+                <span class="mui-icon icon-plice"></span>
+                <span class="mui-tab-label">报警</span>
+            </a>
+            <a class="mui-tab-item1" href="cutScreen.html">
+                <span class="mui-icon icon-cut"></span>
+                <span class="mui-tab-label">切屏</span>
+            </a>
+        </nav>
+        <section>
+            <div class="section">
+                <!--风机-->
+                <div class="ind-fan">
+                    <div class="ind-fan-scroll">
+                        <div class="ind-fan1">
+                            <div class="c-title">风机<span class="c-title-hx"><em></em>活性炭过滤器</span></div>
+                            <div>
+                                <div id="echarts_post1" class="echarts_post" style="width: 100px; height: 100px;"></div>
+                                <div class="ind-fan-sign">
+                                    <div><span class="ind-fan-color c1"></span><span>运行:</span><span>2</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c2"></span><span>停止:</span><span>3</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c3"></span><span>报警:</span><span>2</span><span>台</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ind-fan2">
+                            <div class="c-title">排风罩</div>
+                            <div>
+                                <div id="echarts_post2" class="echarts_post" style="width: 100px; height: 100px;"></div>
+                                <div class="ind-fan-sign">
+                                    <div><span class="ind-fan-color c1"></span><span>运行:</span><span>2</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c2"></span><span>停止:</span><span>3</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c3"></span><span>报警:</span><span>2</span><span>台</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ind-fan3">
+                            <div class="c-title">风机2</div>
+                            <div>
+                                <div id="echarts_post3" class="echarts_post" style="width: 100px; height: 100px;"></div>
+                                <div class="ind-fan-sign">
+                                    <div><span class="ind-fan-color c1"></span><span>运行:</span><span>2</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c2"></span><span>停止:</span><span>3</span><span>台</span></div>
+                                    <div><span class="ind-fan-color c3"></span><span>报警:</span><span>2</span><span>台</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--控制-->
+                <div class="ind-control">
+                    <div class="c-title">控制</div>
+                    <div class="c-con">
+                        <div>
+                            <div class="div1">424有机试剂柜</div>
+                            <div class="div2 bgPlay"></div>
+                            <div class="div3">时间控制</div>
+                        </div>
+                        <div>
+                            <div class="div1">401试剂仓库</div>
+                            <div class="div2"></div>
+                            <div class="div3">手动控制</div>
+                        </div>
+                        <div>
+                            <div class="div1">401试剂仓库</div>
+                            <div class="div2 bgPlay"></div>
+                            <div class="div3">时间控制</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--实验室-->
+                <div class="ind-laboratory">
+                    <div class="c-title">403有机大实验室</div>
+                    <div class="c-con">
+                       <div class="c-con-tf">
+                           <div class="c-con-title">通风柜</div>
+                           <div class="c-con-tf-con">
+                               <ul>
+                                   <li>
+                                       <span></span>
+                                       <span>有机1#</span>
+                                   </li>
+                                   <li>
+                                       <span ></span>
+                                       <span>有机2#</span>
+                                   </li>
+                                   <li>
+                                       <span></span>
+                                       <span>有机3#</span>
+                                   </li>
+                                   <li>
+                                       <span class="active"></span>
+                                       <span>有机4#</span>
+                                   </li>
+                                   <li>
+                                       <span></span>
+                                       <span>有机5#</span>
+                                   </li>
+                                   <li>
+                                       <span></span>
+                                       <span>有机6#</span>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="c-con-pq">
+                           <div class="c-con-title">排风罩</div>
+                           <div class="c-con-pq-con">
+                               <div></div>
+                               <div class="active"></div>
+                           </div>
+                       </div>
+                        <div class="c-con-fj">
+                            <div class="c-con-title">风机</div>
+                            <div class="c-con-fj-con">
+                                <div>
+                                    <span></span>
+                                    <span>风机</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(function () {
+
+        })
+        // 第一个饼图
+        var myChart1 = echarts.init(document.getElementById('echarts_post1'));
+        option1 = {
+//            tooltip: {
+//                trigger: 'item',
+//            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['流量','一样','天天']
+            },
+            color : [ '#49cc7b', '#e5e5e5', '#fa7268' ],
+            series: [
+                {
+                    type:'pie',
+                    radius: ['40%', '80%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '10',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:335, name:'11'},
+                        {value:310, name:'21'},
+                        {value:234, name:'31'}
+                    ],
+
+                }
+            ]
+        };
+        myChart1.setOption(option1);
+//        第二个饼图
+        var myChart2 = echarts.init(document.getElementById('echarts_post2'));
+        option2 = {
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['一样','忍忍','恩恩']
+            },
+            color : [ '#49cc7b', '#e5e5e5', '#fa7268' ],
+            series: [
+                {
+                    type:'pie',
+                    radius: ['40%', '80%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '10',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:335, name:'1的'},
+                        {value:310, name:'2df'},
+                        {value:234, name:'3w'}
+                    ],
+
+                }
+            ]
+        };
+        myChart2.setOption(option2);
+
+//        第三个饼图
+
+        var myChart3 = echarts.init(document.getElementById('echarts_post3'));
+        option3 = {
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['谷歌','解决','尺寸']
+            },
+            color : [ '#49cc7b', '#e5e5e5', '#fa7268' ],
+            series: [
+                {
+                    type:'pie',
+                    radius: ['40%', '80%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '10',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:335, name:'dd'},
+                        {value:310, name:'ss'},
+                        {value:234, name:'3ff3'}
+                    ],
+
+                }
+            ]
+        };
+        myChart3.setOption(option3);
+
+
+
+    </script>
+
+</body>
+</html>

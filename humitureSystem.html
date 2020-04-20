@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>温湿度控制系统</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/resert.css" />
+    <link rel="stylesheet" href="css/humitureSystem.css" />
+    <script src='js/jquery.min.js'></script>
+    <script src='js/echarts.min.js'></script>
+</head>
+
+<body>
+    <div class="humiture-System">
+        <!-- <div class="dataMsg">
+            <img src="./assets/icon/dataMsg.jpg" alt="">
+            <div id="failMsg"></div>
+        </div> -->
+        <header>
+            <div class="main-title">
+                <h1 class="title">实验室监控系统</h1>
+                <!-- <canvas id="myCanvas">
+                    Your browser does not support the HTML5 canvas tag.</canvas> -->
+                <div class="main-time">
+                </div>
+            </div>
+            <div class="system system_1">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat 0px 0px;" />
+                    <span>通风系统</span>
+                </div>
+            </div>
+            <div class="system system_2">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -48px 0px;" />
+                    <span>UPS系统</span>
+                </div>
+            </div>
+            <div class="system system_3">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -100px 0px;" />
+                    <span>供气系统</span>
+                </div>
+            </div>
+            <div class="system system_4">
+                <div class="systemBox">
+                    <img src="" alt="" width="28px" height="28px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -149px 0px;" />
+                    <span>温湿度监控系统</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="subject">
+            <div class="firstLine">
+                <div class="has-side">
+                    <div class="part-top 403"><span>403有机预处理室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB06" class="TH620017052809_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-075</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="al_bottom">
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 404"><span>404镜检室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB05" class="TH620017052819_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD05" class="TH620017052819_2"></span>
+                    </div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BD10" class="TH620017052813_2"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-022</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB10" class="TH620017052813_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-022</p>
+                        </span>
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                        <!-- <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1AB01"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-074</p>
+                        </span> -->
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 406"><span>406生物与处理室</span></div>
+                    <div class="al">
+                        <!-- 原大小（雪花） -->
+                        <!-- <img src="" alt="" width="20px" height="20px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -109px -41px;" /> -->
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB05" class="TH620017052808_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-115</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -193px -50px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDC1BB01" class="TH620017052804_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-052</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDC1BB02" class="TH620017052828_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-053</p>
+                        </span>
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -193px -50px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDC1BB03" class="TH620017052806_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-011</p>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 409"><span>409气质室</span></div>
+                    <div class="al">
+                        <!-- 原大小（环境） -->
+                        <!-- <img src="" alt="" width="20px" height="20px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -67px -39px;" /> -->
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB06" class="TH620017052821_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD06" class="TH620017052821_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 411"><span>411色谱室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB08" class="TH620017052824_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD08" class="TH620017052824_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 413"><span>413样品室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BD08" class="TH620017052811_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-070</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB08" class="TH620017052811_2"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-073</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div class="firstLine">
+                <div class="has-side">
+                    <div class="part-top 414"><span>414AOX/TOC室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB04" class="TH620017052818_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD04" class="TH620017052818_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 416"><span>416无机室（1）</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB11" class="TH620017052814_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-021</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BD11" class="TH620017052814_2"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-021</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB01" class="TH620017052802_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-018</p>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 418"><span>418无机室（2）</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDA1AB01" class="TH620017052815_2"></span></p>
+                        </span>
+                    </div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -193px -50px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDA1AD01" class="TH620017052815_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-117</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDC1AB01" class="TH610018062801_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-012</p>
+                        </span>
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB02" class="TH620017052803_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-016</p>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 419"><span>419液质室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB01" class="TH620017052827_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD01" class="TH620017052827_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 420"><span>420小型仪器室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB04" class="TH620017052807_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-071</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB03" class="TH620017052805_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-072</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 421"><span>421ICP-MS室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB09" class="TH620017052825_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD09" class="TH620017052825_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div class="firstLine">
+                <div class="has-side">
+                    <div class="part-top 422"><span>422无机室（3）</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB07" class="TH620017052810_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-020</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BD07" class="TH620017052810_2"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-020</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 423"><span>423流动注射仪室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB10" class="TH620017052826_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD10" class="TH620017052826_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 424"><span>424综合理化室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                        <span class="firstbox">
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BB09" class="TH620017052812_1"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-019</p>
+                        </span>
+                        &nbsp;&nbsp;
+                        <span>
+                            <p class="p1">&nbsp;&nbsp;<span id="C020002001SGDB1BD09" class="TH620017052812_2"></span></p>
+                            <p class="p2">&nbsp;&nbsp;B-019</p>
+                        </span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 425"><span>425天平室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB07" class="TH620017052823_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD07" class="TH620017052823_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 427"><span>427光谱仪室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB03" class="TH620017052817_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD03" class="TH620017052817_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="has-side">
+                    <div class="part-top 429"><span>429分光光度室</span></div>
+                    <div class="al">
+                        <img src="" alt="" width="27px" height="27px"
+                            style=" background:  url(assets/icon/bicon.png) no-repeat -85px -47px;background-size: 350px" />
+                        &nbsp;&nbsp;
+                        <span id="C020002001SGDA1CB02" class="TH620017052816_1"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="C020002001SGDA1CD02" class="TH620017052816_2"></span>
+                    </div>
+                    <div class="al">
+                    </div>
+                    <div class="al_bottom">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="bottomTips">
+                    <img src="" alt="" width="27px" height="27px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -89px -50px;background-size: 350px" />
+                    <span>环境</span>
+                </div>
+                <div class="bottomTips">
+                    <img src="" alt="" width="27px" height="27px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -140px -51px;background-size: 350px" />
+                    <span>冰箱</span>
+                </div>
+                <div class="bottomTips">
+                    <img src="" alt="" width="27px" height="27px"
+                        style=" background:  url(assets/icon/bicon.png) no-repeat -193px -50px;background-size: 350px" />
+                    <span>培养箱</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src='js/humitureSystem.js'></script>
+</body>
+
+</html>

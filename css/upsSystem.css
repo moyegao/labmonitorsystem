@@ -1,0 +1,345 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.ups-system {
+  height: 100%;
+  width: 100%;
+  background: #040D2E;
+  box-sizing: border-box;
+}
+
+.ups-system header {
+  height: 10%;
+  box-sizing: border-box;
+  background: url("../assets/topbg.png");
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.ups-system header .main-title {
+  width: 20%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ups-system header .main-title .title {
+  text-align: center;
+  font-size: 1.9em;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#54b8ff), to(#3a7dfd));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ups-system header .main-time {
+  text-align: center;
+  color: #999999;
+}
+
+.ups-system header .system {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 45%;
+  margin-top: 3%;
+  color: #9B9CA4;
+}
+
+.ups-system header .system img {
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ups-system header .system .systemBox {
+  height: 100%;
+  width: 70%;
+  margin-left: 10%;
+}
+
+.ups-system header .system span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 25%;
+  color: #999999;
+}
+
+.ups-system header .system_1 {
+  width: 7.6%;
+  margin-left: 17.46%;
+}
+
+.ups-system header .system_1 span {
+  margin-left: 24%;
+}
+
+.ups-system header .system_2 {
+  width: 7.6%;
+  margin-left: 2.28%;
+  border: solid 1px #93beff;
+  border-radius: 8px;
+  background-color: #0F2457;
+}
+
+.ups-system header .system_2 span {
+  margin-left: 24%;
+}
+
+.ups-system header .system_3 {
+  width: 7.6%;
+  margin-left: 29.63%;
+}
+
+.ups-system header .system_3 span {
+  margin-left: 24%;
+}
+
+.ups-system header .system_4 {
+  width: 10%;
+  margin-left: 1.77%;
+}
+
+.ups-system header .system_4 span {
+  margin-left: 10%;
+}
+
+.ups-system header .system_4 img {
+  margin-left: -7%;
+  /* width: 20%;   */
+}
+
+.ups-system section {
+  height: 90%;
+  padding: 2.3% 7.5%;
+  box-sizing: border-box;
+}
+
+.ups-system section .ups-section {
+  height: 100%;
+}
+
+.ups-system section .ups-section>ul {
+  height: 100%;
+  width: 100%;
+}
+
+.ups-system section .ups-section>ul>li {
+  float: left;
+  width: calc(33.33% - 20px);
+  height: calc(50% - 22.5px);
+  margin: 1.1% 0 0 1.1%;
+  font-size: .5rem;
+}
+
+.ups-system section .ups-section>ul>li .li-top {
+  background: #002daa;
+  height: 13%;
+  line-height: 257%;
+  font-size: .9rem;
+  padding-left: 3.8%;
+}
+
+.ups-system section .ups-section>ul>li .li-section {
+  padding: 6% 3.8%;
+  height: calc(100% - 40px);
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top {
+  height: 70%;
+  border-bottom: 1px dashed #313853;
+  padding-bottom:8.5%;
+  position: relative;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top>p {
+  /* border: 1px solid pink; */
+  position: absolute;
+  bottom: 0;
+  height: 28.5%;
+  line-height: 200%;
+  font-size: .9rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #fa3232;
+  padding-left: 4%;
+  top: 78%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul {
+  height: 100%;
+  float: left;
+  width: 16.6%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li {
+  height: 25%;
+  padding-right: 12%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li span {
+  display: block;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li b {
+  height: 35%;
+  width: 35%;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 3px;
+  background: #9f9f9f;
+  display: block;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li b.green {
+  background: #07c260;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li b.orange {
+  background: orange;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ul li b.red {
+  background: red;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol {
+  width: calc(100% - 100px);
+  float: left;
+  height: 100%;
+  background: #313858;
+  padding: 0 1% 0 4%;
+  /* margin: 0 20px 0 0; */
+  border-radius: 3px;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li {
+  height: 33.33%;
+  padding: 0.3% 0;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li:not(:last-child) {
+  border-bottom: 1px solid #464C6C;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li span {
+  float: left;
+  width: 25.1%;
+  height: 100%;
+  line-height: 350%;
+  /*padding:1px;*/
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li div {
+  color: #f68a0a;
+  float: left;
+  line-height: 200%;
+  font-size: 1rem;
+  text-align: center;
+  width: calc(100% - 155px);
+  /*padding: 3px 0;*/
+  position: relative;
+  height: 100%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li div ul {
+  border: 1px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 55%;
+  width: 80%;
+  border-radius: 2px;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li div ul li {
+  float: left;
+  height: 100%;
+  border-radius: 1px;
+  background: #0fcf2a;
+  padding: 0;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li div ul i {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 60%;
+  width: 2px;
+  right: -3px;
+  top: 4px;
+  background: #fff;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-top ol>li p {
+  color: #f68a0a;
+  float: left;
+  width: 13%;
+  height: 100%;
+  line-height: 230%;
+  font-size: .9rem;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-bottom {
+  height: 30%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-bottom ul {
+  height: 100%;
+}
+
+.ups-system section .ups-section>ul>li .li-section .li-section-bottom ul li {
+  font-size: .9rem;
+  width: calc(50% - 20px);
+  float: left;
+  margin-top: 3%;
+  margin-left: 4%;
+  color: #999999;
+}
+
+/* .dataMsg{
+  position: absolute;
+  z-index: 2020;
+  width: 30%;
+  height: 20%;
+  background: #fff;
+  border-radius: 40px;
+  text-align: center;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.dataMsg img{
+  padding: 10px 0px;
+}
+.dataMsg div{
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;
+} */
